@@ -7,6 +7,17 @@ async function getCharacters() {
         }
         const data = await response.json();
         console.log('Personnages Marvel:', data);
+
+        // Récupérer l'élément ul par son identifiant
+        const ul = document.getElementById('characters');
+        if (ul && Array.isArray(data)) {
+            ul.innerHTML = '';
+            data.forEach(character => {
+                const li = document.createElement('li');
+                li.textContent = character;
+                ul.appendChild(li);
+            });
+        }
         return data;
     } catch (error) {
         console.error('Erreur:', error);
