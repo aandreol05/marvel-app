@@ -1,5 +1,5 @@
-function NumberOfCharacters({ characters }) {
-  if (!characters || characters.length === 0) {
+function NumberOfCharacters({ characters = [] }) {
+  if (characters.length === 0) {
     return <p>There is no character</p>;
   }
   

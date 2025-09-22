@@ -11,7 +11,7 @@ function App() {
     <div>
       <h1>Personnages Marvel</h1>
       <NumberOfCharacters characters={characters} />
-      <CharactersList />
+      <CharactersList characters={characters} />
     </div>
   );
 }

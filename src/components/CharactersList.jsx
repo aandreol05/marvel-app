@@ -1,6 +1,4 @@
-import characters from '../data/characters.json'
-
-function CharactersList() {
+function CharactersList({ characters = [] }) {
   return (
     <ul>
       {characters.map((character) => (
