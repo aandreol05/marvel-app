@@ -8,13 +8,13 @@ function CharactersPage() {
     document.title = 'Marvel App';
   }, []);
 
-  // Prendre seulement les 4 premiers personnages
-  const firstFourCharacters = characters.slice(0, 4);
+    // Prendre seulement les 4 premiers personnages
+  //const firstFourCharacters = characters.slice(0, 4);
 
   return (
     <div>
       <h2>Marvel Characters</h2>
-      <CharactersList characters={firstFourCharacters} />
+      <CharactersList characters={characters} />
     </div>
   );
 }
