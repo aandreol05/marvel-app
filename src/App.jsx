@@ -1,4 +1,4 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -19,8 +19,25 @@ function App() {
       <h1>Personnages Marvel</h1>
       <NumberOfCharacters characters={characters} />
       <CharactersList characters={characters} />
-      */}
+      }
     </div>
+  );
+}
+
+export default App;*/
+
+import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router";
+import routes from './routes';
+
+// router to navigate through the app
+const router = createBrowserRouter(routes);
+
+function App() {
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
