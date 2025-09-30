@@ -1,23 +1,23 @@
-import { useEffect } from 'react'
-import CharactersList from '../components/CharactersList'
-import NumberOfCharacters from '../components/NumberOfCharacters'
-import characters from '../data/characters.json'
+import CharactersList from "../components/CharactersList";
+import { getCharacters } from '../api/characters-api';
+import NumberOfCharacters from "../components/NumberOfCharacters";
+import { useLoaderData } from "react-router";
 
-function CharactersPage() {
-  useEffect(() => {
-    document.title = 'Marvel App';
-  }, []);
+const CharactersPage = () => {
+    // change the title of the page
+    document.title = "Characters | Marvel App";
 
-    // Prendre seulement les 4 premiers personnages
-  //const firstFourCharacters = characters.slice(0, 4);
+    // Get the list of characters from the API
+    const { characters } = useLoaderData();
 
-  return (
-    <div>
-      <h2>Marvel Characters</h2>
-      <CharactersList characters={characters} />
-    </div>
-  );
-}
+    return (
+        <>
+            <h2>Marvel Characters</h2>
+            <CharactersList characters={characters} />
+            <br />
+            <NumberOfCharacters characters={characters} />
+        </>
+    );
+};
 
 export default CharactersPage;
-
