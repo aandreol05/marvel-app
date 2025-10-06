@@ -3,6 +3,9 @@ import CharactersPage from './pages/CharactersPage';
 import ContactPage from './pages/ContactPage';
 import Layout from './Layout';
 import NotFoundPage from './pages/NotFoundPage';
+import { getCharacterById, getCharacters } from './api/characters-api';
+import CharacterDetailPage from './pages/CharacterDetailPage';
+
 
 // routes of the application
 const routes = [
@@ -13,7 +16,18 @@ const routes = [
       {
         // main page
         index: true,
+        loader: async () => {
+          // return data from here
+          return { characters: await getCharacters() };
+        },
         Component: CharactersPage
+      },
+      {
+        path: "/characters/:id",
+        Component: CharacterDetailPage,
+        loader: ({ params }) => {
+          return getCharacterById(params.id);
+        }
       },
       {
         // about page
