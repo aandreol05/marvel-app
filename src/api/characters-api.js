@@ -12,7 +12,14 @@ export const getCharacters = () => {
  * returns a character by id
  * @param {*} id 
  * @returns 
+ * @throws {Error} Si aucun personnage n'est trouvé avec l'ID fourni
  */
 export const getCharacterById = (id) => {
-  return characters.find(character => character.id === id);
+  const character = characters.find(character => character.id === id);
+  
+  if (!character) {
+    throw new Error(`Character with ID "${id}" not found`);
+  }
+  
+  return character;
 }
