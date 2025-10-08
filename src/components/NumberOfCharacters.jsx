@@ -15,5 +15,5 @@ export default function NumberOfCharacters({ characters = [] }) {
     }
 
     // If there are multiple characters in the array
-    return <p>There is {characters.length} characters</p>;
+    return <p>There are {characters.length} characters</p>;
 }

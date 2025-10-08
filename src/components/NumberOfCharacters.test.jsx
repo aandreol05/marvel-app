@@ -19,7 +19,7 @@ describe('NumberOfCharacters component', () => {
     test('renders "There is X characters" when characters array has multiple characters', () => {
         const characters = ['Character 1', 'Character 2', 'Character 3'];
         render(<NumberOfCharacters characters={characters} />);
-        expect(screen.getByText('There is 3 characters')).toBeInTheDocument(); // Nouveau test qui va échouer
+        expect(screen.getByText('There are 3 characters')).toBeInTheDocument(); // Nouveau test qui va échouer
     });
 
     test('renders "There is no character" when no characters are provided', () => {
