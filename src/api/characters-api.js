@@ -1,18 +1,25 @@
-import characters from '../data/characters.json';
+import characters from '../data/characters.json'
 
 /**
- * Retourne la liste complète des personnages Marvel
- * @returns {Array} Liste des personnages
+ * returns the list of characters
+ * @returns 
  */
 export const getCharacters = () => {
   return characters;
-};
+}
 
 /**
- * Retourne un personnage spécifique en fonction de son ID
- * @param {number} id - L'ID du personnage à rechercher
- * @returns {Object|undefined} Le personnage trouvé ou undefined si non trouvé
+ * returns a character by id
+ * @param {*} id 
+ * @returns 
+ * @throws {Error} Si aucun personnage n'est trouvé avec l'ID fourni
  */
 export const getCharacterById = (id) => {
-  return characters.find(character => character.id === id);
-};
+  const character = characters.find(character => character.id === id);
+  
+  if (!character) {
+    throw new Error(`Character with ID "${id}" not found`);
+  }
+  
+  return character;
+}
