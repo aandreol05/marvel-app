@@ -3,8 +3,11 @@ const CharacterDetail = ({ character }) => {
         return <p>Character not found</p>;
     }
 
-    // Construire l'URL complète de l'image
-    const imageUrl = character.thumbnail 
+    // Construire l'URL complète de l'image de façon robuste
+    const imageUrl =
+      character.thumbnail &&
+      character.thumbnail.path &&
+      character.thumbnail.extension
         ? `${character.thumbnail.path}.${character.thumbnail.extension}`
         : null;
 
