@@ -16,9 +16,21 @@ const routes = [
       {
         // main page
         index: true,
-        loader: async () => {
-          // return data from here
-          return { characters: await getCharacters() };
+        loader: async ({ request }) => {
+          const url = new URL(request.url);
+          const sortBy = url.searchParams.get('sortBy') || 'name';
+          const order = url.searchParams.get('order') || 'asc';
+          return { characters: await getCharacters({ sortBy, order }) };
+        },
+        Component: CharactersPage
+      },
+      {
+        path: "/characters",
+        loader: async ({ request }) => {
+          const url = new URL(request.url);
+          const sortBy = url.searchParams.get('sortBy') || 'name';
+          const order = url.searchParams.get('order') || 'asc';
+          return { characters: await getCharacters({ sortBy, order }) };
         },
         Component: CharactersPage
       },
