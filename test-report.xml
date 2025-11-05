@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\aandreol\DEV_WEB\Marvel\marvel-app\src\pages\NotFoundPage.test.jsx">
+    <testCase name="NotFoundPage affiche le message 404" duration="70"/>
+    <testCase name="NotFoundPage le titre de la page est correct" duration="5"/>
+  </file>
+  <file path="C:\Users\aandreol\DEV_WEB\Marvel\marvel-app\src\pages\ContactPage.test.jsx">
+    <testCase name="ContactPage affiche le titre et l&apos;adresse email" duration="75"/>
+    <testCase name="ContactPage le titre de la page est correct" duration="5"/>
+  </file>
+  <file path="C:\Users\aandreol\DEV_WEB\Marvel\marvel-app\src\pages\CharacterDetailPage.test.jsx">
+    <testCase name="CharacterDetailPage affiche les détails du personnage" duration="68"/>
+    <testCase name="CharacterDetailPage le titre de la page est correct" duration="4"/>
+  </file>
+  <file path="C:\Users\aandreol\DEV_WEB\Marvel\marvel-app\src\pages\AboutPage.test.jsx">
+    <testCase name="AboutPage affiche le titre et le paragraphe" duration="72"/>
+    <testCase name="AboutPage le titre de la page est correct" duration="3"/>
+  </file>
+  <file path="C:\Users\aandreol\DEV_WEB\Marvel\marvel-app\src\components\CharactersList.test.jsx">
+    <testCase name="CharactersList affiche la liste des personnages avec liens" duration="88"/>
+    <testCase name="CharactersList affiche tous les personnages passés en paramètre" duration="13"/>
+    <testCase name="CharactersList affiche une liste vide si aucun personnage" duration="6"/>
+    <testCase name="CharactersList affiche une liste vide si characters n&apos;est pas passé" duration="4"/>
+  </file>
+  <file path="C:\Users\aandreol\DEV_WEB\Marvel\marvel-app\src\components\CharacterDetail.test.jsx">
+    <testCase name="CharacterDetail affiche correctement les informations du personnage et une image si le thumbnail existe" duration="109"/>
+    <testCase name="CharacterDetail affiche un message si le personnage est introuvable" duration="3"/>
+    <testCase name="CharacterDetail n&apos;affiche pas d&apos;image si thumbnail est manquant" duration="8"/>
+    <testCase name="CharacterDetail affiche le message &quot;No description available&quot; si description est vide" duration="6"/>
+    <testCase name="CharacterDetail affiche le nom et l&apos;id même si la description est absente" duration="8"/>
+    <testCase name="CharacterDetail affiche correctement les informations du personnage sans image si le thumbnail est absent" duration="4"/>
+    <testCase name="CharacterDetail affiche &quot;Character not found&quot; lorsque le personnage n&apos;est pas passé en paramètre" duration="2"/>
+  </file>
+</testExecutions>
